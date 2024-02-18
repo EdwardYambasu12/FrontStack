@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BQ3C53QF1D"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-BQ3C53QF1D');
+</script>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<title>SPORTSUP</title>
+	<link rel="shortcut icon" type="image/png" href="main_logo.png"/>
+	<link rel="stylesheet" type="text/css" href="main-style.css">
+	<link rel="stylesheet" type="text/css" href="widgetCountries.css">
+	<link rel = "stylesheet" type = "text/css" href="bootstrap.min.css">
+	<script src="jquery.js"></script>
+	<script src="jQueryDP.js" type="text/javascript"></script>
+	<script src="jqueryGlobals.js"></script>
+    <script src="jquery.widgetCountries.js" type="text/javascript"></script>
+
+    <style>
+    	.word{
+    		word-wrap: break-word;
+    	}
+    	#holder{
+
+    		width: 100%;
+    		max-width: 100%;
+    	}
+    	#img{
+    		width: 50%;
+    		height: 150px;
+    	}
+    	@media only screen and (max-width : 750px){
+    		#img{
+    			width: 80%;
+    			margin-left: 20%;
+    		}
+    	}
+    </style>
+
+</head>
+<!-- Header menu display -->
+<body class="headerMenuDisplay">
+
+	<!--hidden calendar -->
+	<input type="file" hidden id = "date_holder">
+	<!--Nav Bar -->
+<header>
+
+
+	
+		
+	<div class="container">
+			<div class="nav fixed-top" id = "main_nav">
+	
+			<div id = "flex">
+			<a href="index.html">
+				<img class="logo-img-size-index" id = "logo" src="main_logo.png" alt="Sportsup Logo">
+			</a>
+						<h1 class="text-light">SportsUp</h1>
+	</div>
+
+		<div class="icon_selector">
+
+		
+			<a href="search.html"><h4>🔎</h4></a>
+
+
+
+
+		</div>
+	</div>
+	</div>
+		</div>
+		</div>
+	</div>
+</header>
+
+ <h2 class = "text-warning text-center" id = "sports_header">SportsUp News </h2>
+<div class="container" id = "news_center">
+
+ <hr>
+
+ <div id = "news_inner">
+ 	
+
+ </div>
+
+ </div>
+
+
+<nav class="nav fixed-bottom bg-dark">
+
+	
+		<div>
+			<h6 class="text-warning">&copy SportsUp 2024</h6>
+
+		</div>
+
+		<div class="second_selector">
+
+
+			<a href="index.html">Home</a>
+			<a href="new.html">News</a>
+			<a href="index.html">Scores</a>
+			<a href="login.html">Signup</a>
+			<a href="register.html">Register</a>
+
+
+
+		</div>
+
+
+
+</nav>
+</body>
+<script type="text/javascript">
+	const news_inner = document.querySelector("#news_inner")
+
+	const flexi = document.querySelector("#flexi")	
+	$(document).ready(function() {
+
+	    $('#widgetCountries').widgetCountries({
+	        widgetLeagueLocation: '#widgetLeague',
+	        widgetLiveScoreLocation: '#widgetLiveScore',
+	        widgetWidth: '19%',
+	        preferentialLeagues: ['0', '0']
+	    });
+
+	$("#news_center").css("background-color", "white")
+	const width = $("#news_center").width()
+	console.log(width)
+	$("#holder").css("width", width)
+	$("#news_center").css("border-radius", "10px")
+		$("#news_center").css("height", "600px")
+	    $('#widgetLiveScore').css("margin-top", "60px")
+	     $('#widgetCountries').css("margin-top", "60px")
+
+	    $(".navbar").css("display", "flex", "background-color", "blue");
+	    $(".brand").css("display", "flex");
+	
+	    $("nav").css("justify-content", "space-around")	    
+	    $("a").css("color", "white")
+	    $(".second_selector a").css("text-decoration", "none")
+	    $(".main_nav").css("justify-content", "space-between")
+	    	   $("body").css("background-color", "midnightblue")
+	    	   $("#main_nav").css("display", "flex")
+	    	   $("#main_nav").css("background-color", "gold")
+	    	    $("#main_nav").css("justify-content", "space-around")
+	    	    $("#sports_header").css("margin-top", "60px")
+
+	    var windowWidthSize = $(window).width();
+	    const date = document.querySelector("#date_holder")
+
+		if (windowWidthSize < 769) {
+	  
+
+	   
+	        	    $("body").css("background-color", "midnightblue")
+	        	    $(".second_selector a").css("margin-left", "7%")
+	        	    $(".second_selector a:first").css("margin-left", "-12%")
+	        	        	   $("#main_nav").css("display", "flex")
+	        	    //setting calendar button to popup when user click it
+           
+
+	        date.addEventListener("change", (e)=>{
+	        	e.preventDefault()
+	        	alert("I have been Clicked")
+	        })
+            $(".calendar_button").click(function(){
+                alert("being pressed")
+                date.click()
+                
+            })
+
+	    }
+	    $('.switchButton').click(function() {
+	        if ($('.widgetLeague').length) {
+	            $('.widgetLiveScore').toggle();
+	            $('.callendar-select-for-mobile').toggle();
+	            $('.widgetLeague').toggle();
+	            if ($('.widgetLeague').is(":visible")) {
+	                $('.switchButton').html('Back to Live Score');
+	            } else {
+	                $('.switchButton').html('Back to League Details');
+	            }
+	        }
+	    });
+
+	});
+		
+
+	try{
+		async function majority(){
+
+				const get = await sessionStorage.getItem("news_selected")
+				const rapper = JSON.parse(get)
+				console.log(rapper, "This is what you want")
+
+
+				const cell = `<div id = "holder">
+					<div><h6>Author : ${rapper.author}</h6> <h6>Source : ${rapper.source}</h6></div>
+					<span class = "text-right"> ${rapper.time}  ${rapper.date}</span>
+					<hr>
+					<img src = ${rapper.image_buffer} id = "img">
+
+				
+					<h5 class = "word">${rapper.body}</h5>
+
+				</div>`
+
+				
+
+				news_inner.innerHTML = cell
+
+		}
+
+		majority()
+	}
+
+	catch(err){
+
+	}
+
+
+
+</script>
+</html>

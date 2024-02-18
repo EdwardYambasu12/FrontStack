@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Required meta tags -->
+	<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BQ3C53QF1D"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-BQ3C53QF1D');
+</script>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<title>Sports up</title>
+	<link rel="shortcut icon" type="image/png" href="main_logo.png"/>
+	<link rel="stylesheet" type="text/css" href="main-style.css">  
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="search.css">
+	<script src="jquery.js"></script>
+	<script src="jqueryGlobals.js"></script>
+    <script src="jquery.widgetLeague.js" type="text/javascript"></script>
+
+</head>
+<body>
+		<input type="text" placeholder="Search Teams and Legues" id = "input" class="form-control" onkeydown="changing()">
+
+		<section id = "search_result_section" class="return_list">
+			
+
+		</section>
+
+
+
+	<nav class="nav fixed-bottom bg-dark">
+
+	
+		<div>
+			<h6 class="text-warning">&copy SportsUp 2024</h6>
+
+		</div>
+
+		<div class="second_selector">
+
+	
+			<a href="index.html">Home</a>
+			<a href="new.html">News</a>
+			<a href="index.html">Scores</a>
+			<a href="login.html">Signup</a>
+			<a href="register.html">Register</a>
+
+
+		</div>
+
+
+
+</nav>
+</body>
+<script src="search.js"></script>
+<script type="text/javascript">
+
+	$(document).ready(function() {
+
+       $("a").css("color", "white")
+       $("nav").css("justify-content", "space-around")	   
+	    $(".second_selector a").css("text-decoration", "none")
+	    $("#main_nav").css("display", "flex")
+	    	   
+
+	    var windowWidthSize = $(window).width();
+	    	   	
+	    	 if (windowWidthSize < 769) {
+	    	   	 $(".second_selector a").css("margin-left", "7%")
+	        	    $(".second_selector a:first").css("margin-left", "-12%")
+	        	    $(".mainPageHeader").css("display", "flex")
+	        	}
+
+
+
+
+	});
+
+	// Added click function to header close window
+	$('.backButton').click(function() {
+	    window.close();
+	}); 
+
+</script>
+
+</html>

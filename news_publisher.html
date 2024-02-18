@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>News PUBLISHER</title>
+</head>
+<body>
+	<h1>Welcome to Sports Up News Work Space</h1>
+	<hr>
+
+	<form>
+		
+		<label>Reporter Name </label> <input type="text" name = "report" id= "reporter" placeholder="input reporter name" required>
+		<br><hr>
+		<label>Source or Reference </label> <input id = "source" type="text" placeholder="input reference"required>
+				<br><hr>
+		<label>News </label> <textarea id = "body" required rows="6" name="body"></textarea >
+				<br><hr>
+		<label>Related Images</label><input required type="file" name="select" id = "image" accept="image/*">
+		<br>
+		<br>
+			<button id = "submit_tv">Submit</button>
+
+			<img>
+	</form>
+
+
+	<script>
+		const button = document.querySelector("#submit_tv")
+		const body = document.querySelector("#body")
+		const img = document.querySelector("img")
+		const reporter = document.querySelector("#reporter")
+		const image = document.querySelector("#image")
+		const source = document.querySelector("#source")
+		const form = document.querySelector("form")
+
+		var main
+		var buffer
+		image.addEventListener("change", (e)=>{
+			main = e.target.files[0]
+
+			const reader = new FileReader();
+
+			reader.addEventListener("load", ()=>{
+				console.log(reader.result)
+				buffer = reader.result
+				img.src = reader.result
+			})
+
+			reader.readAsDataURL(main);
+		})
+
+		form.addEventListener("submit", async(e)=>{
+
+			e.preventDefault()
+			console.log(main)
+			form_data = new FormData()
+			form_data.append("image", main)
+			form_data.append("news_body", body.value)
+			form_data.append("news_author", reporter.value )
+			form_data.append("news_source", source.value)
+			form_data.append("buffer_image", buffer)
+
+			console.log(buffer)
+			main_data = {
+				news_reporter : "EDWARD",
+				data : form_data
+			}
+			console.log(form_data)
+
+						await fetch("http://localhost:6100/news", 
+							{method : "POST", body :form_data}
+						)
+
+		} )
+		
+
+	</script>
+
+</body>
+</html>

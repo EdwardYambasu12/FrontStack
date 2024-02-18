@@ -1,0 +1,207 @@
+.container {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+}
+body{
+    background-color: midnightblue;
+}
+.brand{
+
+    align-items: center;
+    color : white
+
+}
+#texture{
+    display: flex;
+    justify-content: space-between;
+}
+#news{
+    background-color: red;
+    border-radius: 9px;
+    margin-left: 5%;
+    
+    cursor: pointer;
+        background-color: red;
+        animation-name: text;
+        animation-duration: 3s;
+        animation-direction: forward;
+        animation-fill-mode: revert;
+        animation-iteration-count: infinite;
+
+}
+#news a{
+    text-decoration: none;
+}
+.finding_height{
+
+    margin-top : 1%;
+    font-size: 1.7em;
+    text-decoration: none;
+        background-color: red;
+        animation-name: text;
+        animation-duration: 3s;
+        animation-direction: forward;
+        animation-fill-mode: revert;
+        animation-iteration-count: infinite;
+
+}
+.finding_height a{
+    text-decoration: none;
+        color: black;
+
+}
+
+@keyframes text{
+    0%{
+        background-color: inherit;
+    }
+    50%{
+        background-color: red;
+    }
+}
+.main_navbar{
+    display: flex;
+    justify-content: space-between;
+    background-color: gold;
+    width: 100%;
+    align-items: center;
+}
+#our_nav{
+        height: 60px;
+}
+
+
+.search_button{
+    height: 30px;
+    background-color: inherit;
+    border-radius: 9px;
+}
+#logo{
+    border-radius: 50px;
+}
+.calendar_button{
+    height: 50px;
+    font-size: 2em;
+    border-radius: 9px;
+
+}
+.nav-loading{
+    display: flex;
+    align-items: center;
+}
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap';
+header {
+    font-family: open sans;
+}
+@media (min-width: 1201px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+@media (min-width: 993px) and (max-width: 1200px) {
+    .container {
+        max-width: 960px;
+    }
+}
+@media (min-width: 769px) and (max-width: 992px) {
+    .container {
+        max-width: 100%;
+    }
+}
+@media (min-width: 577px) and (max-width: 768px) {
+    .container {
+        max-width: 100%;
+    }
+}
+@media (max-width: 576px) {
+    .container {
+        max-width: 100%;
+    }
+}
+.mainPageHeader {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 8px;;
+    background-color: gold;
+}
+.icon_selector{
+    justify-content: space-between;
+    display: flex;
+    width : 10%
+}
+
+.logo-img-size-index {
+    max-width: 100%;
+    height: 45px;
+}
+#flex{
+    display: flex;
+}
+#icon_holder h4{
+    margin-left: 2%;
+}
+.mainPageHeader .switchButton {
+    padding: 1em 0em 1em 1em;
+    margin: 0;
+    text-decoration: underline;
+    min-height: 22px;
+}
+.mainPageHeader .switchButton:hover {
+    cursor: pointer;
+}
+#this_picture{
+    height : 50px;
+    width : 50px;
+    border-radius: 50px;
+}
+@media (max-width: 768px) {
+    .mainPageHeader {
+        display: inline-block;
+        text-align: right;
+    }
+    .callendar-select-for-mobile {
+        color: white;
+        background-color: #0088cc;
+        display: inline-flex;
+        border-color: #0088cc;
+        box-sizing: border-box;
+        margin: 0 1.25rem 0 0;
+        padding: .5rem 1.25rem;
+        font-weight: bold;
+        border-top-left-radius: .25rem;
+        border-top-right-radius: .25rem;
+    }
+    option:checked {
+        color: #0088cc;
+        background-color: black;
+    }
+.merger{
+
+        background-color: pink;
+    }
+#widgetLeague{
+        margin-top: 60px;
+      
+    }
+#widgetLiveScore{
+        margin-top: 60px;
+        background-color: gold;
+        border-radius: 9px;
+       
+    
+
+}
+.second_selector{
+    display : flex
+}
+.second_selector a{
+    text-decoration: none;
+    color : white
+}
+#main_nav{
+    display: flex;
+}

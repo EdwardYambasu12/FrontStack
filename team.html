@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+		<input type="file" id = "file">
+		<input type = "button" id = "button" value="Submit">
+
+		<script>
+			const file = document.querySelector("#file")
+
+			const button = document.querySelector("#button")
+			var data
+			file.addEventListener("change", (e)=>{
+				data = (e.target.files[0])
+			})
+
+
+			button.addEventListener("click", async (e)=>{
+				e.preventDefault()
+
+				const form_data = new FormData();
+				console.log(form_data)
+				form_data.append("image", data)
+				console.log(form_data)
+
+				console.log(data)
+						await fetch("http://localhost:6100/news", 
+							{method : "POST", body :form_data}
+						)
+
+			})
+		</script>
+</body>
+</html>

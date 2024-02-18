@@ -1,0 +1,34 @@
+#container{
+  margin-top: 5%;
+  background: gold;
+  border-radius: 10px;
+  width: 80%;
+  margin-left: 10%;
+
+}
+
+
+#form{
+  width : 90%;
+  margin-left: 5%;
+}
+
+#submit{
+  margin-left: 7.5%;
+}
+#top-logo{
+  border-radius: 20px;
+  width: 20%;
+  margin-left: 40%;
+  height: 150px;
+}
+#error_message{
+
+  width : 25%;
+  right : 35%;
+  border-radius: 10px;
+  bottom : 40%;
+
+  text-align : center;
+  position: fixed;
+}

@@ -1,0 +1,19 @@
+#search_line{
+	display: flex;
+	justify-content: space-between;
+}
+
+.return_list{
+	height: 650px;
+	overflow-y: auto;
+}
+body{
+	background: midnightblue;
+	color: white;
+
+}
+#league_logo{
+	height: 40px;
+	width: 40px;
+	border-radius: 50%;
+}
