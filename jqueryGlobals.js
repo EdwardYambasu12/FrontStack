@@ -1,5 +1,5 @@
 // Widgetkey can be obtained from your account
-var Widgetkey = '159aab6bbd05c594b47d6bd970273f3953cf18a92a774a2f0c838ffa39cd9fef';
+var Widgetkey = '8cbbdf943076208b388efe3c6b76c1505d5d639ede829f5e1b36d38aa6a99fa3';
 var Widgetkey2 = 'a61215ed40223ad4c88feb5f90897ae74af6b01537275163b30abd5d43b05167'
 // Store Widgetkey in sessionStorage
 sessionStorage.setItem('Widgetkey', Widgetkey);
