@@ -176,10 +176,10 @@ else{
         }
 
         
-         fetch("http://localhost:6100/login-info", {method : "POST", headers : {"content-type": "application/x-www-form-urlencoded"}, body :new URLSearchParams(data)})
+         fetch("https://sportsupbackend.onrender.com/login-info", {method : "POST", headers : {"content-type": "application/x-www-form-urlencoded"}, body :new URLSearchParams(data)})
       async function late(){
 
-        const answer = await fetch("http://localhost:6100/ans")
+        const answer = await fetch("https://sportsupbackend.onrender.com/ans")
         const json = await answer.json()
         console.log(json)
         alert(json.text)

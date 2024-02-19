@@ -244,7 +244,7 @@ try{
 
 		try{
 			news_inner.innerHTML = `<div class="loading">Loading&#8230;</div>`
-			const main_data = await fetch("http://localhost:6100/news_rededicate")
+			const main_data = await fetch("https://sportsupbackend.onrender.com/news_rededicate")
 			const res = await main_data.json();
 
 			console.log(res)

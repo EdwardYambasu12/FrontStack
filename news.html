@@ -227,7 +227,7 @@ function don(item){
 try{
 
 	async function let_move(){
-			const main_data = await fetch("http://localhost:6100/news_rededicate")
+			const main_data = await fetch("https://sportsupbackend.onrender.com/news_rededicate")
 			const res = await main_data.json();
 
 			console.log(res)
