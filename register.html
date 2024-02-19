@@ -172,9 +172,9 @@ else{
           confirm_password : passkey.value,
         }
 
-         fetch("https://sportsupbackend.onrender.comsign-in", {method : "POST", headers : {"content-type": "application/x-www-form-urlencoded"}, body :new URLSearchParams(data)})
+         fetch("https://sportsupbackend.onrender.com/sign-in", {method : "POST", headers : {"content-type": "application/x-www-form-urlencoded"}, body :new URLSearchParams(data)})
       async function late(){
-        const answer = await fetch("https://sportsupbackend.onrender.comlogin_answer")
+        const answer = await fetch("https://sportsupbackend.onrender.com/login_answer")
         const json = await answer.json()
         console.log(json)
         alert(json.text)
